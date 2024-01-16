@@ -1,0 +1,12 @@
+{% extends 'store/base.html' %}
+
+{% block title %}
+    Inicio     
+{% endblock title %}
+
+{% block content %}
+    <h1>Bienvenido a mi tienda de musica</h1>
+    <button><a href="{% url 'client_list' %}">Clientes</a></button>
+    <button><a href="{% url 'instrument_list' %}">Instrumentos</a></button>
+    <button><a href="{% url 'type_instrument_list' %}">Tipos de instrumentos</a></button>
+{% endblock content %}

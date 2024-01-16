@@ -1,0 +1,29 @@
+{% extends 'store/base.html' %}
+
+{% block title %}
+    Lista de clientes
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Clientes inscritos</h1>
+
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Email</th>
+        </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{client.name}}</td>
+            <td>{{client.email}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    <button><a href="{% url 'index' %}">Inicio</a></button>
+    <button><a href="{% url 'client_form' %}">Agregar Cliente</a></button>
+    
+{% endblock content %}

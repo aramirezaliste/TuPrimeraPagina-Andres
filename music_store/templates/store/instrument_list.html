@@ -1,0 +1,31 @@
+{% extends 'store/base.html' %}
+
+{% block title %}
+    Lista de Instrumentos
+{% endblock title %}
+
+{% block content %}
+
+    <h1>Instrumentos inscritos</h1>
+
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Tipo</th>
+        </thead>
+    <tbody>
+        {% for instrument in instruments %}
+        <tr>
+            <td>{{instrument.name}}</td>
+            <td>{{instrument.quantity}}</td>
+            <td>{{instrument.instrument_type}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    <button><a href="{% url 'index' %}">Inicio</a></button>
+    <button><a href="{% url 'instrument_form' %}">Agregar Instrumento</a></button>
+    
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block title %}
+    Creacion de clientes
+{% endblock title %}
+
+{% block content %}
+    <h1>Formulario para crear clientes</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear Cliente</button>    
+    </form>
+    <button><a href="{% url 'index' %}">Inicio</a></button>
+{% endblock content %}

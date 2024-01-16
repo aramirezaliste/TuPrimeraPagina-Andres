@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block title %}
+    Creacion de Tipos de Instrumentos
+{% endblock title %}
+
+{% block content %}
+    <h1>Formulario para crear Tipos de Instrumentos</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear Tipo de Instrumento</button>    
+    </form>
+    <button><a href="{% url 'index' %}">Inicio</a></button>
+{% endblock content %}
