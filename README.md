@@ -11,7 +11,9 @@
 
 ## Pasos para ejecutar el proyecto
 
-- Link de Github
+- [Link de Github](https://github.com/aramirezaliste/TuPrimeraPagina-Andres)
+- Clonar proyecto
+- Instalar dependencias
 - Dependencias ocupadas (Listadas en requeriments.txt)
     -   asgiref==3.7.2
     -   Django==5.0.1
