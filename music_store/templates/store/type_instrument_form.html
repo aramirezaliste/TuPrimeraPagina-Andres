@@ -4,8 +4,11 @@
     Creacion de Tipos de Instrumentos
 {% endblock title %}
 
-{% block content %}
+{% block page_title %}
     <h1>Formulario para crear Tipos de Instrumentos</h1>
+{% endblock page_title %}
+
+{% block content %}
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}

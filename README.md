@@ -14,10 +14,13 @@
 - [Link de Github](https://github.com/aramirezaliste/TuPrimeraPagina-Andres)
 - Clonar proyecto
 - Instalar dependencias
-- Dependencias ocupadas (Listadas en requeriments.txt)
-    -   asgiref==3.7.2
-    -   Django==5.0.1
-    -   sqlparse==0.4.4
+        - Dependencias ocupadas (Listadas en requeriments.txt)
+            - asgiref==3.7.2
+            - beautifulsoup4==4.12.3
+            - Django==4.2.9
+            - django-bootstrap-v5==1.0.11
+            - soupsieve==2.5
+            - sqlparse==0.4.4
 
 - Para instalar las dependencias utilizadas en el proyecto:
     - Crear un entorno virtual de python
