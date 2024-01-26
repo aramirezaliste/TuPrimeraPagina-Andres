@@ -28,7 +28,7 @@ SECRET_KEY = get_random_secret_key()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-aramirezali-tuprimerapa-4n4kvhpp2g0.ws-us107.gitpod.io"]
+ALLOWED_HOSTS = ["8000-aramirezali-tuprimerapa-jaf2asrtfmc.ws-us107.gitpod.io"]
 
 
 # Application definition
@@ -122,9 +122,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

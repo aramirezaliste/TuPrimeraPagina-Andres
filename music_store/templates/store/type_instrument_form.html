@@ -5,14 +5,20 @@
 {% endblock title %}
 
 {% block page_title %}
-    <h1>Formulario para crear Tipos de Instrumentos</h1>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h1>Crear tipos de Instrumentos</h1>
+    </div>
 {% endblock page_title %}
 
 {% block content %}
-    <form method="post">
+<div class="d-flex justify-content-center align-items-center mb-3">
+    <form method="post" >
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Crear Tipo de Instrumento</button>    
+        {{ form}}
+        <button type="submit" class="btn btn-dark text-warning">Añadir tipo de Instrumento</button>
+        <button type="button" class="btn btn-dark text-warning"><a class="text-warning text-decoration-none" href="{% url 'type_instrument_list' %}">Tipos de instrumentos</a></button>
     </form>
-    <button><a href="{% url 'index' %}">Inicio</a></button>
+</div>
+
+
 {% endblock content %}

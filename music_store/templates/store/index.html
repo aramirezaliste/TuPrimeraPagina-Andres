@@ -4,9 +4,21 @@
     Inicio     
 {% endblock title %}
 
+{% block page_title %}
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h1>Bienvenido a mi tienda de musica</h1>
+    </div>
+{% endblock page_title %}
+
 {% block content %}
-    <h1>Bienvenido a mi tienda de musica</h1>
-    <button><a href="{% url 'client_list' %}">Clientes</a></button>
-    <button><a href="{% url 'instrument_list' %}">Instrumentos</a></button>
-    <button><a href="{% url 'type_instrument_list' %}">Tipos de instrumentos</a></button>
+<div class="container-fluid row " >
+    {% url 'client_list' as client_list %}
+    {% include 'store/card.html' with name="Clientes" path="client_list" text="Clientes que disfrutan de los instrumentos y los sonidos que salen de tan maravillosas creaciones." %}
+    
+    {% url 'instrument_list' as instrument_list %}
+    {% include 'store/card.html' with name="Instrumentos" path="instrument_list" text="Un instrumento musical consiste en la combinación de uno o más sistemas resonantes capaces de producir uno o más tonos y medios para excitar estos sistemas que están bajo el control del músico." %}
+    
+    {% url 'type_instrument_list' as type_instrument_list %}
+    {% include 'store/card.html' with name="Tipos de instrumentos" path="type_instrument_list" text="Los instrumentos musicales pueden clasificarse según muchos criterios, pero lo más común resulta dividirlos en familias de instrumentos según cómo producen el sonido." %}
+  </div>
 {% endblock content %}

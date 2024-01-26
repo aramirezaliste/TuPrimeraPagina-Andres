@@ -2,7 +2,7 @@
 {% load bootstrap_icons %}
 <nav class="navbar navbar-dark text-light bg-dark">
     <div class="container-fluid">
-        {% bs_icon 'vinyl-fill' size='2em' color="tomato" extra_classes="ms-2" %}
+      <a href="{% url 'index' %}"> <i class="bi bi-vinyl-fill"></i>{% bs_icon 'vinyl-fill' size='2em' color="tomato" extra_classes="ms-2" %}</a> 
       <a class="navbar-brand" href="{% url 'index' %}"> <i class="bi bi-vinyl-fill"></i>Home</a>
     </div>
   </nav>

@@ -5,14 +5,19 @@
 {% endblock title %}
 
 {% block page_title %}
-    <h1>Formulario para crear clientes</h1>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <h1>Formulario para crear clientes</h1>
+    </div>
 {% endblock page_title %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Crear Cliente</button>    
-    </form>
-    <button><a href="{% url 'index' %}">Inicio</a></button>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark text-warning">Crear Cliente</button>
+            <button type="button" class="btn btn-dark text-warning"><a class="text-warning text-decoration-none" href="{% url 'client_list' %}">Clientes</a></button>
+        </form>
+    </div>
+    
 {% endblock content %}
